@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CALCULATOR APP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">-->
+    <script>
+        function sqrt_function() {
+            calculator.display.value = Math.sqrt(calculator.display.value);
+        }
+        function power_function() {
+            calculator.display.value = Math.pow(calculator.display.value,2);
+        }
+        function cos_function() {
+            calculator.display.value += Math.cos(calculator.display.value);
+        }
+
+        function sin_function() {
+            calculator.display.value += Math.sin(calculator.display.value);
+        }
+
+        function tan_function() {
+            calculator.display.value += Math.tan(calculator.display.value);
+        }
+    </script>
+</head>
+<body>
+    <div id="mainDiv" class="row">
+        <form name="calculator">
+            <H2>CALCULATOR APP USING <span id="HCJ"><br>(HTML,CSS,JAVASCRIPT)</span></H2>
+                <div class="column">
+                    <input type="text"name="display" id="input1" class="inputField">
+                    <span><input type="button" name="clear" id="span1" class="span2" value="c" onclick="calculator.display.value = ''"></span>
+                </div>
+                <div class="column">
+                    <span><input type="button" name="one" id="span1" value="1" onclick="calculator.display.value+='1'"></span>
+                    <span><input type="button" name="two" id="span1" value="2" onclick="calculator.display.value+='2'"></span>
+                    <span><input type="button" name="three" id="span1" value="3" onclick="calculator.display.value+='3'"></span>
+                    <span><input type="button" name="operator" id="span1" class="span2" value="+" onclick="calculator.display.value+='+'"></span>
+                    <span><input type="button" id="span1" class="span2" value="  √   " onClick="sqrt_function()"></span>
+
+                </div>
+                <div class="column">
+                    <span><input type="button" name="four" id="span1" value="4" onclick="calculator.display.value+='4'"></span>
+                    <span><input type="button" name="five" id="span1" value="5" onclick="calculator.display.value+='5'"></span>
+                    <span><input type="button" name="six" id="span1" value="6" onclick="calculator.display.value+='6'"></span>
+                    <span><input type="button" name="operator" id="span1" class="span2" value="-" onclick="calculator.display.value+='-'"></span>
+                    <span><input type="button" id="span1" class="span2" value="a^b " onClick="power_function()"></span>
+                </div>
+                <div class="column">
+                    <span><input type="button" name="seven" id="span1" value="7" onclick="calculator.display.value+='7'"></span>
+                    <span><input type="button" name="eight" id="span1" value="8" onclick="calculator.display.value+='8'"></span>
+                    <span><input type="button" name="nine" id="span1" value="9" onclick="calculator.display.value+='9'"></span>
+                    <span><input type="button" name="operator" id="span1" class="span2" value="*" onclick="calculator.display.value+='*'"></span>
+                    <span><input type="button" id="span1" class="span2" value=" sin " onClick="sin_function()"></span>
+                </div>
+                <div class="column">
+                    <span><input type="button" name="operator" id="span1" value="%" onclick="calculator.display.value+='%'"></span>
+                    <span><input type="button" name="0" id="span1" value="0" onclick="calculator.display.value+='0'"></span>
+                    <span><input type="button" name="." id="span1" value="." onclick="calculator.display.value+='.'"></span>
+                    <span><input type="button" name="operator" id="span1" class="span2" value="/" onclick="calculator.display.value+='/'"></span>
+                    <span><input type="button" id="span1" class="span2" value="cos " onClick="cos_function()"></span>
+                </div>
+                <div class="column">
+                    <span><input type="button" name="doit" id="equal" class="span2" value="=" onclick="calculator.display.value = eval(calculator.display.value)"></span>
+                    <span><input type="button" id="span1" class="span2" value=" tan " onClick="tan_function()"></span>
+                </div>
+                <br>
+                <br>
+                <H4><span id="HCJ"><i class="fa fa-copyright "></i> HAFIZ SALMAN RAFIQ WM10022</span></H4>
+             </form>
+         </div>
+    </body>
+</html>
